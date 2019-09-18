@@ -1,0 +1,4 @@
+KUBELET_HOSTNAME="--hostname-override=1.1.1.1"
+KUBELET_POD_INFRA_CONTAINER="--pod-infra-container-image=registry.cn-hangzhou.aliyuncs.com/google_containers/pause-amd64:3.1"
+KUBELET_CONFIG="--config=/etc/kubernetes/kubelet-config.yml"
+KUBELET_ARGS="--authentication-token-webhook=true --bootstrap-kubeconfig=/etc/kubernetes/kubelet-bootstrap.conf --kubeconfig=/etc/kubernetes/kubelet.conf --cert-dir=/etc/kubernetes/ssl"

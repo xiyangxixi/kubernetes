@@ -1,0 +1,2 @@
+KUBECONFIG="--kubeconfig=/etc/kubernetes/kube-proxy.conf"
+KUBE_PROXY_ARGS="--proxy-mode=ipvs  --masquerade-all=true --cluster-cidr=172.20.0.0/16"
