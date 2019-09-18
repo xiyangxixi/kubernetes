@@ -10,7 +10,7 @@
 * install directory: /usr/local/bin
 
 |number|ip|role|
-|--|--|--|--|
+|---|---|---|
 |1|1.1.1.1|master etcd flannel|
 |2|1.1.1.2|node etcd flannel|
 |3|1.1.1.3|node etcd flannel|
