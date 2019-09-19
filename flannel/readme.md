@@ -14,7 +14,7 @@ cd flannel*
 mv flanneld /usr/local/bin/
 chmod +x /usr/local/bin/flanneld
 ```
-3. 注册系统服务文件见flanneld1.service flanneld2.service flanneld3.service
+3. 注册系统服务文件见flanneld1.service flanneld2.service flanneld3.service 配置文件见flanneld
 4. 修改docker.service见docker.service,其中EnvironmentFile=-/run/flannel/docker EnvironmentFile=-/run/flannel/subnet.env以及$DOCKER_NETWORK_OPTIONS需要添加
 5. 先启动flannle再启动docker: systemctl daemon-reload && systemctl start flanneld && systemctl restart docker
 6. 使用ip a查看docker0与flanneld是否在同一网段，ping一下其他节点的docker0ip监测是否能通
