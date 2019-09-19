@@ -15,7 +15,7 @@
 |2|1.1.1.2|node etcd flannel|
 |3|1.1.1.3|node etcd flannel|
 
-文件下载地址:["文件下载地址"](https://pan.baidu.com/s/1TPKUs-vWTyoo4VKwtv9cjA)
+[文件下载地址](https://pan.baidu.com/s/1TPKUs-vWTyoo4VKwtv9cjA) 提取码：ac3g 
 
 ##### 整个安装步骤 具体看每个文件夹的内容
 
