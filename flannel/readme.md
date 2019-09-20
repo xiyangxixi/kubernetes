@@ -12,6 +12,7 @@ wget https://github.com/coreos/flannel/releases/download/v0.11.0/flannel-v0.11.0
 tar -zxvf flannel-v0.11.0-linux-arm.tar.gz
 cd flannel*
 mv flanneld /usr/local/bin/
+mv mk* /usr/local/bin
 chmod +x /usr/local/bin/flanneld
 ```
 3. 注册系统服务文件见flanneld1.service flanneld2.service flanneld3.service 配置文件见flanneld
