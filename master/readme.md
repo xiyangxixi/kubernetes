@@ -175,7 +175,7 @@ EOF
 cat >/etc/kubernetes/apiserver<<EOF
 KUBE_API_ADDRESS="--advertise-address=0.0.0.0"
 KUBE_ETCD_ARGS="--etcd-servers=https://1.1.1.1:2379,https://1.1.1.2:2379,https://1.1.1.3:2379 --etcd-cafile=/etc/kubernetes/ssl/ca.pem --etcd-certfile=/etc/etcd/ssl/etcd.pem --etcd-keyfile=/etc/etcd/ssl/etcd-key.pem"
-KUBE_SERVICE_ADDRESSES="--service-cluster-ip-range=10.254.0.0/24"
+KUBE_SERVICE_ADDRESSES="--service-cluster-ip-range=10.254.0.0/16"
 KUBE_ADMISSION_CONTROL="--enable-admission-plugins=NamespaceLifecycle,LimitRanger,ServiceAccount,DefaultStorageClass,DefaultTolerationSeconds,MutatingAdmissionWebhook,ValidatingAdmissionWebhook,ResourceQuota"
 KUBE_APISERVER_ARGS="--allow-privileged=true --authorization-mode=Node,RBAC --enable-bootstrap-token-auth=true --token-auth-file=/etc/kubernetes/token.csv --service-node-port-range=30000-40000 --tls-cert-file=/etc/kubernetes/ssl/kube-apiserver.pem --tls-private-key-file=/etc/kubernetes/ssl/kube-apiserver-key.pem --client-ca-file=/etc/kubernetes/ssl/ca.pem --service-account-key-file=/etc/kubernetes/ssl/sa.pub --enable-swagger-ui=true --secure-port=6443 --kubelet-preferred-address-types=InternalIP,ExternalIP,Hostname --anonymous-auth=false --kubelet-client-certificate=/etc/kubernetes/ssl/admin.pem --kubelet-client-key=/etc/kubernetes/ssl/admin-key.pem"
 EOF
