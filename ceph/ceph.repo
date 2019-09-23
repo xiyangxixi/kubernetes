@@ -1,0 +1,27 @@
+[Ceph]
+name=Ceph packages for
+baseurl=http://mirrors.aliyun.com/ceph/rpm-jewel/el7/$basearch
+enabled=1
+gpgcheck=1
+type=rpm-md
+gpgkey=http://mirrors.aliyun.com/ceph/keys/release.asc
+priority=1
+
+[Ceph-noarch]
+name=Ceph noarch packages
+baseurl=http://mirrors.aliyun.com/ceph/rpm-jewel/el7/noarch
+enabled=1
+gpgcheck=1
+type=rpm-md
+gpgkey=http://mirrors.aliyun.com/ceph/keys/release.asc
+priority=1
+
+[ceph-source]
+name=Ceph source packages
+baseurl=http://mirrors.aliyun.com/ceph/rpm-jewel/el7/SRPMS
+enabled=1
+gpgcheck=1
+type=rpm-md
+gpgkey=http://mirrors.aliyun.com/ceph/keys/release.asc
+priority=1
+

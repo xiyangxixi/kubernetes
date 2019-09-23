@@ -1,0 +1,17 @@
+kind: StorageClass
+apiVersion: storage.k8s.io/v1
+metadata:
+  name: dynamic-ceph-rdb
+#provisioner: ceph.com/rbd
+provisioner: kubernetes.io/rbd
+parameters:
+  monitors: 1.1.1.1:6789,1.1.1.2:6789,1.1.1.3:6789
+  adminId: admin
+  adminSecretName: ceph-admin-secret
+  adminSecretNamespace: kube-system
+  pool: kube
+  userId: kube
+  userSecretName: ceph-kube-secret
+  fsType: ext4
+  imageFormat: "2"
+  imageFeatures: "layering"
