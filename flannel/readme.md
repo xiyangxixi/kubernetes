@@ -2,9 +2,9 @@
 
 1. flannel需要etcd来存储子网信息，所以先写入预定义子网段
 ```
-etcdctl --ca-file=/etc/etcd/ssl/etcd-ca.pem --cert-file=/etc/etcd/ssl/etcd.pem --key-file=/etc/etcd/ssl/etcd-key.pem --endpoints="https://10.10.1.162:2379,https://10.10.1.163:2379,https://10.10.1.166:2379"  mkdir /kube-centos/network
+etcdctl --ca-file=/etc/etcd/ssl/etcd-ca.pem --cert-file=/etc/etcd/ssl/etcd.pem --key-file=/etc/etcd/ssl/etcd-key.pem --endpoints="https://1.1.1.1:2379,https://1.1.1.2:2379,https://1.1.1.3:2379"  mkdir /kube-centos/network
 
-etcdctl --ca-file=/etc/etcd/ssl/etcd-ca.pem --cert-file=/etc/etcd/ssl/etcd.pem --key-file=/etc/etcd/ssl/etcd-key.pem --endpoints="https://10.10.1.162:2379,https://10.10.1.163:2379,https://10.10.1.166:2379"  mk /kube-centos/network/config '{"Network":"172.20.0.0/16","SubnetLen":24,"Backend":{"Type":"vxlan"}}'
+etcdctl --ca-file=/etc/etcd/ssl/etcd-ca.pem --cert-file=/etc/etcd/ssl/etcd.pem --key-file=/etc/etcd/ssl/etcd-key.pem --endpoints="https://1.1.1.1:2379,https://1.1.1.2:2379,https://1.1.1.3:2379"  mk /kube-centos/network/config '{"Network":"172.20.0.0/16","SubnetLen":24,"Backend":{"Type":"vxlan"}}'
 ```
 2. 下载二进制文件并解压移动至/usr/local/bin
 ```
